@@ -3,54 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shree Bhutandevi Secoandary School</title>
+    <title>Shree Bhutandevi Secondary School</title>
     <style>
         body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    background-image: url("Bhutandevi ground.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            margin: 0;
+            background-image: url("Bhutandevi ground.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
 
-.container {
-    width: 90%;
-border-radius: 60px;
-    max-width: 1000px;
-    margin: auto;
-}
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            border-radius: 60px;
+        }
 
-header {
+        header {
     background-color: #2c3e50;
-    color: #1898b8;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
-    border-radius: 30px;
-    background-color: #5d6c6e; /* Adjust as needed */
+    max-width: 1200px;
+    margin: auto;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    color: #fff; /* Adjust text color as needed */
 }
 
 .logo-img {
-    height: 50px; /* Adjust size as needed */
-    margin-right: 20px; /* Space between logo and text */
+    height: 50px;
+    margin-right: 20px;
     border-radius: 25px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem; /* Adjust spacing between nav items */
+    gap: 1rem;
 }
 
 .nav-links li {
@@ -58,14 +61,18 @@ header {
 }
 
 .nav-links a {
-    color: #fff; /* Adjust link color as needed */
+    color: #fff;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fa5c1d;
 }
 
 .nav-toggle {
-    display: none; /* Show the nav toggle only on smaller screens */
+    display: none;
 }
-
 @media (max-width: 768px) {
     .nav-links {
         display: none; /* Hide links on small screens */
@@ -77,268 +84,130 @@ header {
         width: 100%;
     }
 
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
     .nav-toggle {
         display: block;
         cursor: pointer;
+        color: #fff;
+        font-size: 24px;
     }
 
     .nav-links.active {
         display: flex;
     }
-}
-
-.nav-links a {
-    color: #fa5c1d;
-    text-decoration: none;
-    transition: color 0.3s;
 }
  
 .nav-links a:hover {
-    color: #6034db;
-}
-.academics_text{
-    align-items: center;
-    align-content: center;
-    text-align: center;
-}
-.hero-section {
-    background: url('hero.jpg') no-repeat center center/cover;
-    color: #ff0000;
-    text-align: center;
-    size: 30px;
-    align-items: center;
-    padding: 100px 20px;
-    animation: fadeIn 1s ease-in;
+    color: #0000;
 }
 
-.about_paragraph {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 20px, 20px;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    word-spacing: 3px;
-}
-.academic_paragraph {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 20px, 20px;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    word-spacing: 3px;
-}
-.content-section {
-    transform: translateY(10px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
-    text-align: center;
-    align-items: center;
-}
+        .hero-section {
+            color: #ff0000;
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeIn 1s ease-in;
+        }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+        .content-section:nth-child(even) {
+            background-color: #78b2d8;
+        }
+        .content-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-/* Contact Section Styles */
-#contact {
-    background-color: #f9f9f9;
-    padding: 60px 20px;
-    text-align: center;
-}
+        footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 7px 0;
+        }
 
-#contact h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #2c3e50;
-}
+        .cta-button {
+            display: inline-block;
+            padding: 10px 18px;
+            margin-top: 40px;
+            background-color: #3498db;
+            color: #ecf0f1;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
 
-#contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
+        .cta-button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
 
-#contact label {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 8px;
-    color: #333;
-}
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 50px 20px;
+            }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    resize: vertical; /* Only for textarea */
-}
+            .content-section {
+                padding: 40px 20px;
+            }
+        }
 
-#contact input[type="text"]:focus,
-#contact input[type="email"]:focus,
-#contact textarea:focus {
-    border-color: #3498db;
-    outline: none;
-}
-
-#contact button[type="submit"] {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-#contact button[type="submit"]:hover {
-    background-color: #2980b9;
-    transform: scale(1.05);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    #contact h2 {
-        font-size: 28px;
-    }
-
-    #contact form {
-        width: 100%;
-        padding: 0 10px;
-    }
-}
-
-
-.content-section:nth-child(even) {
-    background-color: #78b2d8;
-}
-
-footer {
-    background-color: #34495e;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    border-radius: 100px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #ecf0f1;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #2980b9;
-    transform: scale(1.05);
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        display: none;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hero-section {
-        padding: 50px 20px;
-    }
-
-    .content-section {
-        padding: 40px 20px;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Scroll reveal animation */
-.reveal {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <img src="Bhutandevi_logo.jpg" alt="School Logo" class="logo-img">
-                    Shree Bhutandevi Secondary School (Technical School) </br>
-                    Hetauda-4, Makwanpur, Bagmati Province
-                </div>
-                <div class="nav-toggle" id="navToggle">☰</div>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="academics.html">Academics</a></li>
-                    <li><a href="admission.html">Admission</a></li>
-                    <li><a href="activities.html">Activities</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            <div class="logo">
+                <img src="Bhutandevi_logo.jpg" alt="School Logo" class="logo-img">
+                Shree Bhutandevi Secondary School (Technical School) <br>
+                Hetauda-4, Makwanpur, Bagmati Province
             </div>
+            <div class="nav-toggle" id="navToggle">☰</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <section id="home" class="hero-section">
         <div class="container">
-            <h1>शिक्षामा स्वस्थ प्रतिस्पर्धा : हाम्रो प्रतिबद्धता </br>
+            <h1>शिक्षामा स्वस्थ प्रतिस्पर्धा : हाम्रो प्रतिबद्धता <br>
                 ACADEMIC EXCELLENCE FOR BETTER TOMORROW</h1>
-                <p> Education is a human right with immense power to transform </br>
-                    On its foundation rest the cornerstones of freedom, democracy and sustainable human development</p>
+            <p>Education is a human right with immense power to transform<br>
+                On its foundation rest the cornerstones of freedom, democracy, and sustainable human development</p>
             <p>Providing quality education since 1990</p>
+            
             <a href="about.html" class="cta-button">Learn More</a>
         </div>
-    </br></br>
-    <section id="contact" class="content-section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit" class="cta-button">Send</button>
-            </form>
-        </div>
     </section>
+</br>
     <footer>
         <div class="container">
-            <p>&copy; 2024 Shree Bhutandevi Secoandary School. All rights reserved.</p>
+            <p>&copy; 2024 Shree Bhutandevi Secondary School. All rights reserved.</p>
         </div>
     </footer>
-    <script src="scripts.js"></script>
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function () {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
