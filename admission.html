@@ -3,34 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shree Bhutandevi Secoandary School</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Admission | Shree Bhutandevi Secondary School</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #5d6c6e;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 50px;
+            margin-right: 20px;
+            border-radius: 25px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fa5c1d;
+        }
+
+        .nav-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #333;
+                width: 100%;
+            }
+
+            .nav-toggle {
+                display: block;
+                cursor: pointer;
+                color: #fff;
+                font-size: 24px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
+        .content-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        .form-section {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+            outline: none;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        .form-group .cta-button {
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .form-group .cta-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <img src="Bhutandevi_logo.jpg" alt="School Logo" class="logo-img">
-                    Shree Bhutandevi Secondary School (Technical School) </br>
-                    Hetauda-4, Makwanpur, Bagmati Province
-                </div>
-                <div class="nav-toggle" id="navToggle">☰</div>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="academics.html">Academics</a></li>
-                    <li><a href="admission.html">Admission</a></li>
-                    <li><a href="activities.html">Activities</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            <div class="logo">
+                <img src="Bhutandevi_logo.jpg" alt="School Logo" class="logo-img">
+                Shree Bhutandevi Secondary School (Technical School) <br>
+                Hetauda-4, Makwanpur, Bagmati Province
             </div>
+            <div class="nav-toggle" id="navToggle">☰</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <section id="admissions" class="content-section">
-        <div class="container">
-            <h2>Admission</h2>
-            <p>Learn more about our admissions process and requirements.</p>
+        <div class="form-section">
+            <h2>Admission Form</h2>
+            <form action="submit_admission.php" method="post">
+                <div class="form-group">
+                    <label for="studentName">Student Full Name:</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="fatherName">Father's Name:</label>
+                    <input type="text" id="fatherName" name="fatherName" required>
+                </div>
+                <div class="form-group">
+                    <label for="motherName">Mother's Name:</label>
+                    <input type="text" id="motherName" name="motherName" required>
+                </div>
+                <div class="form-group">
+                    <label for="province">Select Province:</label>
+                    <select id="province">
+                        <option value="">Select Province</option>
+                        <option value="1">Koshi</option>
+                        <option value="2">Madhesh</option>
+                        <option value="3">Bagmati</option>
+                        <option value="4">Gandaki</option>
+                        <option value="5">Lumbini</option>
+                        <option value="6">Karnali</option>
+                        <option value="7">Sudurpashchim</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="district">Select District:</label>
+                    <select id="district" disabled>
+                        <option value="">Select District</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="level">Select Level:</label>
+                    <select id="level" name="level">
+                        <option value="">Select Level</option>
+                        <option value="primary">Primary</option>
+                        <option value="secondary">Secondary</option>
+                        <option value="highschool">High School</option>
+                        <option value="diploma">Diploma</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="class">Select Class:</label>
+                    <select id="class" name="class" disabled>
+                        <option value="">Select Class</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
         </div>
     </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Shree Bhutandevi Secondary School. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function () {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+
+        const provinces = {
+             1: ["Jhapa", "Morang", "Sunsari", "Bhojpur", "Dhankuta", "Terhathum", "Panchthar", "Ilam", "Khotang", "Okhaldhunga", "Solukhumbu"],
+             2: ["Saptari", "Sunsari", "Dhanusa", "Mahottari", "Sarlahi", "Rautahat", "Bara", "Parsa", "Chhathapur", "Siraha", "Udayapur"],
+             3: ["Kathmandu", "Bhaktapur", "Lalitpur", "Ramechhap", "Dolakha", "Sindhupalchok", "Kavre", "Sindhuli", "Makwanpur", "Rasuwa", "Nuwakot"],
+             4: ["Pokhara", "Kaski", "Manang", "Lamjung", "Tanahun", "Gorkha", "Syangja", "Parbat", "Baglung", "Myagdi"],
+             5: ["Rupandehi", "Nawalparasi", "Kapilvastu", "Dang", "Bardia", "Banke", "Surkhet", "Rolpa", "Pyuthan", "Salyan"],
+             6: ["Surkhet", "Jumla", "Kalikot", "Mugu", "Dolpa", "Humla", "Jajarkot", "Rukum", "Sindhuli", "Dailekh"],
+             7: ["Kanchanpur", "Baitadi", "Dadeldhura", "Darchula", "Achham", "Bajura", "Bajhang", "Doti", "Kailali", "Saptari"]
+        };
+
+        const provinceSelect = document.getElementById('province');
+        const districtSelect = document.getElementById('district');
+
+        provinceSelect.addEventListener('change', function() {
+            const provinceId = this.value;
+            districtSelect.innerHTML = '<option value="">Select District</option>'; // Reset districts
+            
+            if (provinceId) {
+                const districts = provinces[provinceId];
+                districts.forEach(district => {
+                    const option = document.createElement('option');
+                    option.value = district;
+                    option.textContent = district;
+                    districtSelect.appendChild(option);
+                });
+                districtSelect.disabled = false;
+            } else {
+                districtSelect.disabled = true;
+            }
+        });
+
+        const classOptions = {
+            primary: [
+                "Montessori", "LKG", "UKG", 
+                "Class-1", "Class-2", "Class-3", 
+                "Class-4", "Class-5", "Class-6"
+            ],
+            secondary: [
+                "Class-7", "Class-8", "Class-9-English", 
+                "Class-9-Nepali", "Class-9-Civil"
+            ],
+            highschool: [
+                "Class-10", "Class-11-Commerce", 
+                "Class-11-Science", "Class-11-Civil"
+            ],
+            diploma: [
+                "Diploma in Civil Engineering (CTEVT)"
+            ]
+        };
+
+        const levelSelect = document.getElementById('level');
+        const classSelect = document.getElementById('class');
+
+        levelSelect.addEventListener('change', function() {
+            const level = this.value;
+            classSelect.innerHTML = '<option value="">Select Class</option>'; // Reset classes
+
+            if (level) {
+                const classes = classOptions[level];
+                classes.forEach(classItem => {
+                    const option = document.createElement('option');
+                    option.value = classItem;
+                    option.textContent = classItem;
+                    classSelect.appendChild(option);
+                });
+                classSelect.disabled = false;
+            } else {
+                classSelect.disabled = true;
+            }
+        });
+    </script>
 </body>
+</html>
