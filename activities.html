@@ -5,49 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activities | Shree Bhutandevi Secondary School</title>
     <style>
-       body {
+        /* General Reset */
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    width: 90%;
-border-radius: 60px;
-    max-width: 1000px;
-    margin: auto;
-}
-
+/* Header */
 header {
     background-color: #2c3e50;
-    color: #1898b8;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
-    border-radius: 30px;
-    background-color: #5d6c6e; /* Adjust as needed */
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    color: #fff; /* Adjust text color as needed */
 }
 
 .logo-img {
-    height: 50px; /* Adjust size as needed */
-    margin-right: 20px; /* Space between logo and text */
+    height: 50px;
+    margin-right: 20px;
     border-radius: 25px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem; /* Adjust spacing between nav items */
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
@@ -55,28 +57,37 @@ header {
 }
 
 .nav-links a {
-    color: #fff; /* Adjust link color as needed */
+    color: #fff;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fa5c1d;
 }
 
 .nav-toggle {
-    display: none; /* Show the nav toggle only on smaller screens */
+    display: none;
 }
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hide links on small screens */
+        display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjust position as needed */
+        top: 60px;
         right: 0;
-        background-color: #333; /* Match background color */
+        background-color: #333;
         width: 100%;
+        z-index: 1000; /* Ensure navigation is above other content */
     }
 
     .nav-toggle {
         display: block;
         cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+        z-index: 1000; /* Ensure toggle is above other content */
     }
 
     .nav-links.active {
@@ -84,66 +95,116 @@ header {
     }
 }
 
-.nav-links a {
-    color: #fa5c1d;
+/* Hero Section */
+.hero-section {
+    color: #ff0000;
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Content Section */
+.content-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.content-section:nth-child(even) {
+    background-color: #78b2d8;
+}
+
+footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 7px 0;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 20px;
+    }
+
+    .content-section {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* News and Report Section */
+.news-report-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.news-report-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.news-report-header h2 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.news-report-header p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+}
+
+.news-report-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.news-report-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-report-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.news-report-card h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.news-report-card p {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+.news-report-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
     text-decoration: none;
+    font-weight: bold;
     transition: color 0.3s;
 }
- 
-.nav-links a:hover {
-    color: #0000;
-}
-#activities {
-    margin: 40px 0;
-}
 
-h2 {
-    text-align: center;
-    color: #2c3e50;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.activity-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.activity-form label {
-    font-size: 1rem;
-    color: #333;
-}
-
-.activity-form input,
-.activity-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.activity-form input:focus,
-.activity-form textarea:focus {
-    border-color: #3498db;
-    outline: none;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-    align-self: flex-start;
-}
-
-.cta-button:hover {
-    background-color: #2980b9;
-    transform: scale(1.05);
+.news-report-card a:hover {
+    color: #2980b9;
 }
 
     </style>
@@ -181,8 +242,86 @@ h2 {
                 <button type="submit" class="cta-button">Post</button>
             </form>
         </div>
+    </section>    
+    <section class="news-report-section">
+        <div class="news-report-header">
+            <h2>Latest News & Reports</h2>
+            <p>Stay updated with our latest activities and announcements.</p>
+        </div>
+        <div class="news-report-cards">
+            <div class="news-report-card">
+                <h3>News Title 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="news-report-card">
+                <h3>Report Title 2</h3>
+                <p>Phasellus interdum erat ut augue dignissim, sit amet vehicula tortor fermentum.</p>
+                <a href="#">Read More</a>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
     </section>
+    <script>
+        document.getElementById('newsReportForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = {
+                title: formData.get('title'),
+                content: formData.get('content')
+            };
+        
+            // Send data to the server
+            fetch('/api/news-reports', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // Optionally, you can clear the form or update the UI
+                document.getElementById('newsReportForm').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+        // Assuming MongoDB is set up and connected
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+// Define schema
+const NewsReportSchema = new Schema({
+    title: String,
+    content: String,
+    date: { type: Date, default: Date.now }
+});
+
+// Create model
+const NewsReport = mongoose.model('NewsReport', NewsReportSchema);
+
+// API endpoint to save data
+app.post('/api/news-reports', async (req, res) => {
+    const { title, content } = req.body;
     
-    <script src="scripts.js"></script>
+    if (!title || !content) {
+        return res.status(400).json({ error: 'Title and content are required' });
+    }
+    
+    try {
+        const newReport = new NewsReport({ title, content });
+        await newReport.save();
+        res.status(201).json(newReport);
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to save news report' });
+    }
+});
+
+        </script>
 </body>
 </html>
