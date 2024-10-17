@@ -76,7 +76,7 @@ header {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .nav-links {
         display: none;
         flex-direction: column;
@@ -140,13 +140,21 @@ footer {
     transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .hero-section {
         padding: 50px 20px;
     }
 
     .content-section {
         padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+}
+        @media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .content {
+        padding: 10px;
     }
 }
 
